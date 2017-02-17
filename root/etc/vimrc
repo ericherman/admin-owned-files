@@ -1,0 +1,51 @@
+" Begin /etc/vimrc
+
+
+"I read this, but it doesn't seem to be honoring it:
+"http://vimdoc.sourceforge.net/htmldoc/options.html#mouse
+"http://vimdoc.sourceforge.net/htmldoc/term.html#mouse-using
+set mouse=n
+
+set nocompatible
+"set backspace=2
+set backspace=indent,eol,start  " more powerful backspacing
+
+set ruler
+set modeline
+set laststatus=2
+
+" persistent undo support
+" note: you need to mkdir ~/.vim/undodir before this will work
+set history=500
+set backupcopy=auto,breakhardlink
+set undofile " turn on persistent undo's
+set undodir=~/.vim/undodir " where to store the undo files
+set undolevels=1000  " max number of changes to undo
+set undoreload=10000 " max number of lines to save for undo
+
+" allow switching to a different buffer without saving
+set hidden
+set switchbuf=usetab
+
+syntax on
+
+filetype on
+au BufNewFile,BufRead *.ino set filetype=cpp
+au BufNewFile,BufRead *.scad set filetype=cpp
+
+set background=dark
+"Why are these not honored?
+"hi Comment ctermfg=LightBlue
+"hi comment ctermfg=blue
+"hi Comment ctermfg=DarkGrey
+"hi comment ctermfg=6
+"hi Comment ctermfg=LightBlue
+hi Comment ctermfg=Grey guibg=Grey
+
+let java_space_errors = 1
+let c_space_errors=1
+highlight ExtraWhitespace ctermbg=red guibg=red
+" Show trailing whitepace and spaces before a tab:
+match ExtraWhitespace /\s\+$\| \+\ze\t/
+
+" End /etc/vimrc
