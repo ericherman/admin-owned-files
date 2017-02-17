@@ -1,0 +1,5 @@
+I use a "package users" system as described by Matthias S. Benkmann in
+"more control and package management using package users".
+
+Some files are hand-edited by me, usually as root, and I'd rather they
+were owned by a different user than "root".
