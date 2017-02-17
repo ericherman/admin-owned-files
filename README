@@ -3,3 +3,9 @@ I use a "package users" system as described by Matthias S. Benkmann in
 
 Some files are hand-edited by me, usually as root, and I'd rather they
 were owned by a different user than "root".
+
+Unless otherwise specified, files are copyright Eric Herman, and made
+avaiable as Free Software under the terms of the GPL[1] version 3 or
+later.
+
+[1] https://www.gnu.org/licenses/gpl-3.0.txt
